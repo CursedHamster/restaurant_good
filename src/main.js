@@ -47,11 +47,6 @@ const router = createRouter({
       };
     } else if (to.path === from.path) {
       return { top: 0 };
-    } else if (to.path !== from.path && to.hash) {
-      return {
-        el: to.hash,
-        behavior: "instant",
-      };
     } else if (savedPosition) {
       return { ...savedPosition, behavior: "instant" };
     } else {

@@ -1,5 +1,6 @@
 <script setup>
-import { ref, onMounted, watchEffect } from "vue";
+import { ref, onMounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
 import { useProductsStore } from "../stores/useProductsStore";
 import ProductGallery from "../ProductGallery.vue";
 import CategoryTitle from "../CategoryTitle.vue";
@@ -8,6 +9,11 @@ const productsStore = useProductsStore();
 const activeType = ref(typesData[0]?.name);
 const typeElements = ref([]);
 onMounted(() => {
+  const routeHash = useRoute().hash;
+  if (routeHash) {
+    const router = useRouter();
+    router.push(routeHash);
+  }
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry, i) => {
