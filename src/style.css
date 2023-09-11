@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Nunito Sans", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  @apply sm:text-lg 2xl:text-xl bg-zinc-950 text-white overflow-x-hidden;
+}
+
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+  background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  -moz-transition: background-color 5000s ease-in-out 0s;
+  -ms-transition: background-color 5000s ease-in-out 0s;
+  -o-transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.custom-global-px {
+  @apply px-7 2xl:px-20;
+}
+
+.custom-global-py {
+  @apply py-20;
+}
+
+.custom-global-text-light {
+  @apply text-zinc-300 text-opacity-90;
+}
+
+.custom-global-gradient-translucent {
+  @apply bg-gradient-to-br from-zinc-900 via-transparent to-stone-900 shadow-sm shadow-zinc-900;
+}
+
+.custom-global-swiper .swiper-slide {
+  @apply mr-4 !w-fit;
+}
+
+.custom-global-swiper .swiper-button-next,
+.custom-global-swiper .swiper-button-prev {
+  @apply hidden sm:flex;
+}
+
+.custom-global-swiper .swiper-button-next::after,
+.custom-global-swiper .swiper-button-prev::after {
+  font-family: FontAwesome;
+  @apply text-red-800 transition-all duration-300 ease-in-out;
+}
+
+.custom-global-swiper .swiper-button-prev::after {
+  content: "\f053";
+  @apply active:-translate-x-1;
+}
+.custom-global-swiper .swiper-button-next::after {
+  content: "\f054";
+  @apply active:translate-x-1;
+}
+
+.custom-global-swiper .swiper-button-lock {
+  display: none;
+}
+
+.custom-global-swiper .swiper-scrollbar {
+  @apply !h-2;
+}
