@@ -155,7 +155,7 @@ onMounted(() => {
   >
     <video
       class="absolute top-0 left-0 right-0 bottom-0 z-[-1] w-full h-full object-cover min-h-full"
-      src="main-video.mp4"
+      src="/main-video.mp4"
       autoPlay
       loop
       muted
