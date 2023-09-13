@@ -153,20 +153,20 @@ function addSizeToCart() {
       ><img
         :src="product?.imageUrl"
         :alt="product?.name"
-        class="w-full h-64 2xl:h-72 object-cover rounded-t-xl"
+        class="w-full h-56 2xl:h-72 object-cover rounded-t-xl"
         :class="{ 'sm:rounded-none sm:rounded-l-xl sm:h-80': cardTypeCart }"
     /></RouterLink>
     <div v-else class="h-96 w-full md:basis-1/2 md:h-[70vh]">
       <img
         :src="product?.imageUrl"
         :alt="product?.name"
-        class="rounded-xl w-full h-full object-cover md:rounded-none md:rounded-l-xl"
+        class="rounded-none w-full h-full object-cover md:rounded-none md:rounded-l-xl"
       />
     </div>
     <div
       class="h-64 px-4 py-6 flex flex-col justify-between gap-3 sm:h-72 md:h-64 2xl:h-72"
       :class="{
-        'h-full px-0 gap-8 sm:h-full md:basis-1/2 md:py-16 md:h-full md:gap-10 md:px-8 2xl:h-auto':
+        'custom-global-px h-full gap-8 sm:h-full md:basis-1/2 md:py-16 md:h-full md:gap-10 2xl:h-auto':
           cardTypeProduct,
         'sm:basis-1/2 sm:py-12 sm:px-6 sm:w-full sm:min-w-0 sm:h-80 md:h-80':
           cardTypeCart,

@@ -47,7 +47,11 @@ select {
 }
 
 .custom-global-px {
-  @apply px-7 2xl:px-20;
+  @apply px-6 2xl:px-20;
+}
+
+.custom-global-px-md {
+  @apply md:px-6 2xl:px-20;
 }
 
 .custom-global-py {

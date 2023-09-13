@@ -160,7 +160,7 @@ onMounted(() => {
       loop
       muted
     />
-    <div class="custom-global-px my-32 flex flex-col gap-4 max-w-5xl">
+    <div class="custom-global-px my-20 flex flex-col gap-4 max-w-5xl">
       <h2 class="text-3xl 2xl:text-5xl font-bold text-red-500">ГУД</h2>
       <h1 class="text-5xl 2xl:text-8xl my-4 2xl:my-10">У нас GOOD</h1>
       <p class="custom-global-text-light">

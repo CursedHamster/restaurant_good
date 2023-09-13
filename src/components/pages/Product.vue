@@ -56,7 +56,7 @@ watch(
         назад</GeneralButton
       >
     </div>
-    <div class="custom-global-px">
+    <div class="custom-global-px-md">
       <ProductCard :product="product" card-type="product" />
     </div>
   </main>

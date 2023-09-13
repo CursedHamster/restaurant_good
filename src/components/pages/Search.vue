@@ -32,7 +32,7 @@ function submit() {
   >
     <div class="w-full max-w-3xl">
       <form
-        class="flex justify-between items-center gap-4 w-full text-lg mt-20"
+        class="flex justify-between items-center gap-4 w-full text-lg mt-16 md:mt-20"
       >
         <input
           type="text"
