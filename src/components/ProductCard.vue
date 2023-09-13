@@ -166,7 +166,7 @@ function addSizeToCart() {
     <div
       class="h-64 px-4 py-6 flex flex-col justify-between gap-3 sm:h-72 md:h-64 2xl:h-72"
       :class="{
-        'custom-global-px h-full gap-8 sm:h-full md:basis-1/2 md:py-16 md:h-full md:gap-10 2xl:h-auto':
+        'h-full px-0 gap-8 sm:h-full md:basis-1/2 md:py-16 md:h-full md:gap-10 md:px-8 2xl:h-auto':
           cardTypeProduct,
         'sm:basis-1/2 sm:py-12 sm:px-6 sm:w-full sm:min-w-0 sm:h-80 md:h-80':
           cardTypeCart,

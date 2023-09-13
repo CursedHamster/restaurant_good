@@ -43,21 +43,21 @@ const orderCost = computed(() => totalPrice?.value + deliveryCost?.value);
         <div
           class="py-6 custom-global-text-light text-xl border-t-2 border-b-2 border-zinc-800"
         >
-          <h4>
+          <h4 class="flex flex-col gap-2 sm:flex-row">
             Сума замовлення:
-            <span class="ml-2 text-white font-bold">{{ totalPrice }} грн</span>
+            <span class="text-white font-bold">{{ totalPrice }} грн</span>
           </h4>
-          <h4 class="mt-2">
+          <h4 class="mt-6 flex flex-col gap-2 sm:flex-row">
             Сума доставки:
-            <span class="ml-2 text-white font-bold"
-              >{{ deliveryCost }} грн</span
-            >
+            <span class="text-white font-bold">{{ deliveryCost }} грн</span>
           </h4>
         </div>
         <div class="flex flex-col gap-8">
-          <h3 class="text-xl font-bold text-white">
+          <h3
+            class="text-xl font-bold text-white flex flex-col gap-2 sm:flex-row"
+          >
             Загальна сума:
-            <span class="ml-2 text-2xl text-red-500">{{ orderCost }} грн</span>
+            <span class="text-2xl text-red-500">{{ orderCost }} грн</span>
           </h3>
           <GeneralButton big @click="overPagesStore?.changeOpenOrder(true)"
             >Замовити</GeneralButton

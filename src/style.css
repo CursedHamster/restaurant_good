@@ -8,11 +8,12 @@
   html {
     font-family: "Nunito Sans", sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 }
 
 body {
-  @apply sm:text-lg 2xl:text-xl bg-zinc-950 text-white overflow-x-hidden;
+  @apply sm:text-lg 2xl:text-xl bg-zinc-950 text-white overflow-hidden;
 }
 
 input:autofill,

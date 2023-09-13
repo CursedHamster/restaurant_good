@@ -39,9 +39,9 @@ export const useOverPagesStore = defineStore("overPages", () => {
       openOrder.value,
     (val) => {
       if (val) {
-        document.querySelector("body").classList.add("overflow-hidden");
+        document.querySelector("html").classList.add("overflow-hidden");
       } else {
-        document.querySelector("body").classList.remove("overflow-hidden");
+        document.querySelector("html").classList.remove("overflow-hidden");
       }
     }
   );
