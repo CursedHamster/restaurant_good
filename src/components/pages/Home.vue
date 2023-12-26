@@ -160,10 +160,10 @@ onMounted(() => {
       loop
       muted
     />
-    <div class="custom-global-px my-20 flex flex-col gap-4 max-w-5xl">
+    <div class="custom-global-px my-20 flex flex-col gap-6 max-w-5xl">
       <h2 class="text-3xl 2xl:text-5xl font-bold text-red-500">ГУД</h2>
       <h1 class="text-5xl 2xl:text-8xl my-4 2xl:my-10">У нас GOOD</h1>
-      <p class="custom-global-text-light">
+      <p class="text-xl custom-global-text-light">
         Ласкаво запрошуємо в нашу піцерію, де смак та якість завжди на першому
         місці! Ми гордо представляємо широкий вибір піц, салатів, десертів та
         напоїв, приготованих з найкращих інгредієнтів. Завітайте до нас і
@@ -190,9 +190,9 @@ onMounted(() => {
       <i class="fa-solid fa-chevron-down"></i>
     </a>
   </main>
-  <section id="home_qualities" class="custom-global-px py-20">
+  <section id="home_qualities" class="custom-global-px-md py-20">
     <ul
-      class="custom-global-gradient-translucent rounded-xl flex flex-col justify-center items-center gap-16 px-8 py-8 w-fit mx-auto text-center md:px-16 lg:flex-row 2xl:max-w-[100rem]"
+      class="custom-global-gradient-translucent-md rounded-xl flex flex-col justify-center items-center gap-20 px-8 py-16 w-fit mx-auto text-center md:px-20 lg:flex-row 2xl:max-w-[100rem]"
     >
       <li
         v-for="quality in qualities"
@@ -224,7 +224,7 @@ onMounted(() => {
   </section>
   <section
     id="home_contacts"
-    class="py-8 flex flex-col md:flex-row-reverse md:justify-between md:gap-4 2xl:gap-20"
+    class="py-8 flex flex-col md:flex-row-reverse md:justify-between md:gap-6 2xl:gap-20"
   >
     <div class="custom-global-px md:pl-0 md:flex-1">
       <h2 class="text-4xl 2xl:text-6xl text-center">Наші контакти</h2>
@@ -277,25 +277,25 @@ onMounted(() => {
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        class="h-96 md:h-full"
+        class="h-96 md:h-full md:rounded-r-xl"
       ></iframe>
     </div>
   </section>
   <section
     id="home_testimonials"
-    class="custom-global-gradient-translucent py-8 mt-20 rounded-t-[5rem]"
+    class="custom-global-gradient-translucent-md py-8 mt-20 rounded-t-[5rem]"
   >
     <h2 class="custom-global-px text-4xl 2xl:text-6xl text-center mt-8">
       Відгуки наших клієнтів
     </h2>
     <ul
-      class="py-8 flex flex-col gap-6 md:px-8 md:flex-row md:flex-wrap md:justify-center md:gap-10 2xl:py-16 2xl:gap-10"
+      class="py-12 flex flex-col gap-10 md:px-8 md:flex-row md:flex-wrap md:justify-center 2xl:py-16 2xl:gap-16"
     >
       <li
         v-for="testimonial in testimonials"
         class="custom-testimonial px-7 py-6 bg-zinc-900 shadow-sm shadow-zinc-800 md:rounded-xl md:basis-5/12 md:text-center md:px-12 md:py-10 md:flex md:flex-col md:justify-center md:items-center"
       >
-        <div class="flex items-center gap-2 md:flex-col">
+        <div class="flex items-center gap-3 md:flex-col">
           <h4 class="custom-global-text-light">{{ testimonial.name }}</h4>
           <div class="text-xs flex gap-0.5 text-red-500 md:text-base">
             <i class="fa-solid fa-star"></i>
@@ -305,7 +305,7 @@ onMounted(() => {
             <i class="fa-solid fa-star"></i>
           </div>
         </div>
-        <p class="text-lg mt-2 font-bold 2xl:text-xl">
+        <p class="text-lg mt-5 font-bold 2xl:text-xl">
           {{ testimonial.description }}
         </p>
       </li>

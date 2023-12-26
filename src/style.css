@@ -66,8 +66,12 @@ select {
   @apply bg-gradient-to-br from-zinc-900 via-transparent to-stone-900 shadow-sm shadow-zinc-900;
 }
 
+.custom-global-gradient-translucent-md {
+  @apply md:bg-gradient-to-br md:from-zinc-900 md:via-transparent md:to-stone-900 md:shadow-sm md:shadow-zinc-900;
+}
+
 .custom-global-swiper .swiper-slide {
-  @apply mr-4 !w-fit;
+  @apply mr-6 !w-fit;
 }
 
 .custom-global-swiper .swiper-button-next,

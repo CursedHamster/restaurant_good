@@ -17,7 +17,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <header class="fixed w-full z-[1000]" role="banner">
+  <header id="header" class="fixed w-full z-[1000]" role="banner">
     <nav
       class="custom-global-px flex max-md:justify-between py-5 md:py-2 relative items-center bg-gradient-to-b from-zinc-900 via-[#18181bc2] to-transparent to-100% text-lg 2xl:text-xl"
       role="navigation"
@@ -90,7 +90,7 @@ onMounted(() => {
       </RouterLink>
 
       <div
-        class="flex md:w-full md:justify-between md:items-center max-md:absolute max-md:bg-gradient-to-bl max-md:from-zinc-950 max-md:to-[#18181bea] max-md:shadow-sm max-md:shadow-zinc-800 max-md:backdrop-blur-[2px] max-md:flex-col max-md:right-0 max-md:top-full max-md:w-full max-md:px-7 max-md:py-2 max-md:text-center"
+        class="flex md:w-full md:justify-between md:items-center max-md:absolute max-md:bg-gradient-to-bl max-md:from-zinc-950 max-md:to-[#18181bea] max-md:shadow-sm max-md:shadow-zinc-800 max-md:backdrop-blur-[2px] max-md:flex-col max-md:right-0 max-md:top-full max-md:w-full max-md:px-7 max-md:py-4 max-md:text-center"
         :class="{
           'max-md:translate-x-full': !openNav,
           'custom-nav-menu-out': !openNav && openNav !== null,
@@ -98,7 +98,7 @@ onMounted(() => {
         }"
       >
         <div
-          class="md:basis-5/12 flex items-center gap-4 max-md:flex-col max-md:border-b-2 max-md:border-zinc-600 max-md:border-opacity-20 max-md:py-3"
+          class="md:basis-5/12 flex items-center gap-4 max-md:flex-col max-md:border-b-2 max-md:border-zinc-600 max-md:border-opacity-20 max-md:py-5"
         >
           <RouterLink
             class="custom-nav-general-link"
@@ -191,7 +191,7 @@ onMounted(() => {
           </svg>
         </RouterLink>
         <div
-          class="md:basis-5/12 flex md:justify-end items-center gap-4 max-md:flex-col py-3"
+          class="md:basis-5/12 flex md:justify-end items-center gap-4 max-md:flex-col py-5"
         >
           <a class="custom-nav-icon-link" href="tel:+380666666666">
             <i class="fa-solid fa-phone"></i>
@@ -233,7 +233,7 @@ onMounted(() => {
           </button>
         </div>
         <div
-          class="text-4xl flex gap-4 justify-center py-4 md:hidden max-md:border-t-2 max-md:border-zinc-600 max-md:border-opacity-20"
+          class="text-4xl flex gap-6 justify-center py-5 md:hidden max-md:border-t-2 max-md:border-zinc-600 max-md:border-opacity-20"
         >
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>

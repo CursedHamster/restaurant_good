@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Flip from "gsap/Flip";
 import { useProductsStore } from "../stores/useProductsStore";
 import ProductGallery from "../ProductGallery.vue";
 import CategoryTitle from "../CategoryTitle.vue";
@@ -8,7 +11,36 @@ import typesData from "../../assets/types";
 const productsStore = useProductsStore();
 const activeType = ref(typesData[0]?.name);
 const typeElements = ref([]);
+
+function addFixed() {
+  const element = document.querySelector("#menu_nav");
+  const sectionsState = Flip.getState("#menu_sections", { simple: true });
+  if (!element.classList.contains("fixed")) {
+    element.classList.add("fixed");
+  }
+  Flip.from(sectionsState, { duration: 0.5 });
+}
+
+function removeFixed() {
+  const element = document.querySelector("#menu_nav");
+  const sectionsState = Flip.getState("#menu_sections", { simple: true });
+  if (element.classList.contains("fixed")) {
+    element.classList.remove("fixed");
+  }
+  Flip.from(sectionsState, { duration: 0.5 });
+}
+
 onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger, Flip);
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: "#menu_title",
+      scrub: true,
+      start: "bottom 90px",
+      onEnter: addFixed,
+      onLeaveBack: removeFixed,
+    },
+  });
   const routeHash = useRoute().hash;
   if (routeHash) {
     const router = useRouter();
@@ -37,9 +69,15 @@ onMounted(() => {
 });
 </script>
 <template>
-  <main role="main" class="custom-global-py flex-1 flex flex-col items-center">
-    <h1 class="custom-global-px text-4xl 2xl:text-6xl mt-8 sm:w-full">Меню</h1>
-    <nav class="w-full pt-8 sticky top-10 z-50">
+  <main
+    id="menu"
+    role="main"
+    class="custom-global-py flex-1 flex flex-col items-center"
+  >
+    <h1 id="menu_title" class="custom-global-px text-4xl pb-8 2xl:text-6xl mt-8 sm:w-full">
+      Меню
+    </h1>
+    <nav id="menu_nav" class="w-full top-[90px] z-50">
       <div
         class="custom-global-px custom-menu-nav flex items-center gap-2 overflow-x-auto lg:gap-4"
       >
@@ -53,6 +91,7 @@ onMounted(() => {
       </div>
     </nav>
     <div
+      id="menu_sections"
       class="custom-global-px flex flex-col items-center gap-32 mt-10 w-full"
     >
       <section

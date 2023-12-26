@@ -193,7 +193,7 @@ function addSizeToCart() {
         </p>
       </div>
       <div
-        class="flex flex-col gap-2 md:flex-row-reverse md:justify-between md:items-end"
+        class="flex flex-col gap-4 md:flex-row-reverse md:justify-between md:items-end"
         :class="{
           'h-full gap-4 sm:basis-1/2': cardTypeProduct,
         }"
