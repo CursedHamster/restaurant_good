@@ -207,11 +207,11 @@ onMounted(() => {
       class="absolute top-0 left-0 right-0 bottom-0 z-[-1] w-full h-full bg-gradient-to-b from-[#16161cdc] to-zinc-950"
     ></div>
     <div
-      class="custom-global-px my-20 flex flex-col gap-10 max-w-5xl xl:max-w-7xl"
+      class="custom-global-px my-20 flex flex-col gap-6 max-w-5xl xl:max-w-7xl"
     >
-      <h2 class="text-3xl 2xl:text-5xl font-bold text-red-500">ГУД</h2>
+      <h2 class="text-3xl 2xl:text-5xl text-red-500">Піцерія «ГУД»</h2>
       <h1 class="font-bold text-5xl md:text-7xl xl:text-9xl">У нас GOOD</h1>
-      <p class="custom-global-text-light xl:text-2xl">
+      <p class="custom-global-text-light mt-6 xl:text-2xl">
         Ласкаво запрошуємо до нашої піцерії, де смак та якість завжди на першому
         місці! Ми гордо представляємо широкий вибір піц, салатів, десертів та
         напоїв, приготованих з найкращих інгредієнтів
@@ -239,18 +239,18 @@ onMounted(() => {
   </main>
   <section id="home_qualities" class="custom-global-px custom-global-py">
     <ul
-      class="custom-global-background-image-md rounded-xl flex flex-col justify-center items-center gap-20 w-fit mx-auto text-center md:px-28 md:py-20 md:overflow-hidden lg:flex-row lg:px-10 lg:gap-6 lg:items-start xl:gap-10 2xl:max-w-[100rem] 2xl:px-20 2xl:gap-16"
+      class="custom-global-background-image-md rounded-xl flex flex-col justify-center items-center gap-16 w-fit mx-auto text-center md:px-28 md:py-20 md:overflow-hidden lg:flex-row lg:px-10 lg:gap-6 lg:items-start xl:gap-10 2xl:max-w-[100rem] 2xl:px-20 2xl:gap-16"
     >
       <li
         v-for="quality in qualities"
-        class="custom-home-quality flex flex-col gap-4 basis-1/3 2xl:gap-6"
+        class="custom-home-quality flex flex-col gap-4 basis-1/3 2xl:gap-4"
       >
         <i
-          class="text-red-500 text-6xl mb-2 lg:text-5xl"
+          class="text-red-500 text-4xl mb-4 lg:text-5xl"
           :class="quality.iconClass"
         ></i>
         <h3 class="text-2xl font-bold 2xl:text-3xl">{{ quality.title }}</h3>
-        <p class="custom-global-text-light">
+        <p class="custom-global-text-light text-base md:text-lg">
           {{ quality.description }}
         </p>
       </li>
@@ -338,11 +338,11 @@ onMounted(() => {
         v-for="testimonial in testimonials"
         class="custom-testimonial custom-global-background-image shadow-sm shadow-zinc-800 rounded-xl px-6 py-6 w-full text-center flex flex-col justify-center items-center md:px-12 md:py-10 lg:max-w-lg 2xl:max-w-xl"
       >
-        <div class="flex flex-col items-center gap-1">
-          <h4 class="custom-global-text-light text-base">
+        <div class="flex flex-col items-center gap-2">
+          <h4 class="custom-global-text-light text-sm md:text-base">
             {{ testimonial.name }}
           </h4>
-          <div class="text-xs flex gap-0.5 text-red-500 md:text-base">
+          <div class="text-base flex gap-1 text-red-500 md:text-xl">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -350,7 +350,7 @@ onMounted(() => {
             <i class="fa-solid fa-star"></i>
           </div>
         </div>
-        <p class="text-lg mt-4 2xl:text-xl">
+        <p class="text-base mt-4 md:text-xl">
           {{ testimonial.description }}
         </p>
       </li>
@@ -369,7 +369,7 @@ onMounted(() => {
 
 .custom-map-description {
   /* @apply px-4 py-2 bg-zinc-900 rounded-b-md text-xl font-bold; */
-  @apply text-2xl text-center md:text-start;
+  @apply text-xl text-center md:text-start md:text-2xl;
 }
 .custom-map-title {
   /* @apply bg-zinc-800 text-zinc-50 px-4 py-2 rounded-t-md flex items-center gap-2; */

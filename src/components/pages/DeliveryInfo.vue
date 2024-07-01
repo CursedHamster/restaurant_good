@@ -24,7 +24,7 @@ const deliveryInfo = [
         <!-- <i
           class="fa-solid fa-diamond absolute top-0 bottom-0 -left-2 w-fit text-red-500 flex items-center text-2xl"
         ></i> -->
-        <p class="text-4xl font-bold text-red-500">{{ i + 1 }}</p>
+        <p class="text-5xl font-bold text-red-500">{{ i + 1 }}</p>
         <p>{{ info }}</p>
       </div>
     </div>

@@ -25,13 +25,13 @@ onMounted(() => {
     >
       <RouterLink
         to="/"
-        class="md:hidden flex gap-2 text-xl font-bold"
+        class="md:hidden flex gap-4 text-xl font-bold"
         @click="handleClick"
       >
         <img
           :src="GoodLogo"
           alt="GOOD Restaurant Logo"
-          class="w-7 max-h-10"
+          class="w-8"
         />
         <!-- <svg
           class="w-7 max-h-10 fill-red-500"
@@ -96,7 +96,7 @@ onMounted(() => {
       </RouterLink>
 
       <div
-        class="flex md:w-full md:justify-between md:items-center max-md:absolute max-md:bg-gradient-to-bl max-md:from-zinc-950 max-md:to-[#18181bea] max-md:shadow-sm max-md:shadow-zinc-800 max-md:backdrop-blur-[2px] max-md:flex-col max-md:right-0 max-md:top-full max-md:w-full max-md:px-7 max-md:py-4 max-md:text-center"
+        class="flex md:w-full md:justify-between md:items-center max-md:absolute max-md:bg-zinc-950 max-md:border-t max-md:border-b max-md:border-zinc-800 max-md:flex-col max-md:right-0 max-md:top-full max-md:w-full max-md:px-7 max-md:py-4 max-md:text-center"
         :class="{
           'max-md:translate-x-full': !openNav,
           'custom-nav-menu-out': !openNav && openNav !== null,
@@ -104,7 +104,7 @@ onMounted(() => {
         }"
       >
         <div
-          class="md:basis-5/12 flex items-center gap-4 max-md:flex-col max-md:border-b-2 max-md:border-zinc-600 max-md:border-opacity-20 max-md:py-5"
+          class="md:basis-5/12 flex items-center gap-4 max-md:flex-col max-md:border-b-2 max-md:border-zinc-600 max-md:border-opacity-20 max-md:py-5 md:gap-6 2xl:gap-10"
         >
           <RouterLink
             class="custom-nav-general-link"
@@ -133,7 +133,7 @@ onMounted(() => {
         <img
           :src="GoodLogo"
           alt="GOOD Restaurant Logo"
-          class="max-w-10 max-h-10"
+          class="max-w-12 max-h-12"
         />
           <!-- <svg
             class="max-w-10 max-h-10 fill-red-500"
@@ -202,7 +202,7 @@ onMounted(() => {
           </svg> -->
         </RouterLink>
         <div
-          class="md:basis-5/12 flex md:justify-end items-center gap-4 max-md:flex-col py-5"
+          class="py-5 flex items-center gap-4 max-md:flex-col md:basis-5/12 md:justify-end md:gap-6 2xl:gap-10"
         >
           <a class="custom-nav-icon-link" href="tel:+380666666666">
             <i class="fa-solid fa-phone"></i>
@@ -251,22 +251,22 @@ onMounted(() => {
         </div>
       </div>
 
-      <button class="w-8 h-8 relative md:hidden" @click="openNav = !openNav">
+      <button class="w-10 h-10 relative md:hidden" @click="openNav = !openNav">
         <span class="sr-only">Відкрити головне меню</span>
-        <div class="w-8 absolute top-1/2 right-0">
+        <div class="w-10 absolute top-1/2 right-0">
           <span
             aria-hidden="true"
-            class="block absolute h-1 w-8 rounded-full bg-current transform transition duration-300 ease-in-out"
+            class="block absolute h-1 w-10 rounded-full bg-current transform transition duration-300 ease-in-out"
             :class="{ 'rotate-45': openNav, ' -translate-y-2.5': !openNav }"
           ></span>
           <span
             aria-hidden="true"
-            class="block absolute h-1 w-8 rounded-full bg-current transform transition duration-300 ease-in-out"
+            class="block absolute right-0 h-1 w-5 rounded-full bg-current transform transition duration-300 ease-in-out"
             :class="{ 'opacity-0': openNav }"
           ></span>
           <span
             aria-hidden="true"
-            class="block absolute h-1 w-8 rounded-full bg-current transform transition duration-300 ease-in-out"
+            class="block absolute right-0 h-1 w-10 rounded-full bg-current transform transition duration-300 ease-in-out"
             :class="{ '-rotate-45': openNav, ' translate-y-2.5': !openNav }"
           ></span>
         </div>

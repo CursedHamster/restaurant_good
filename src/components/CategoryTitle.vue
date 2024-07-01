@@ -8,12 +8,11 @@ const props = defineProps(["index"])
     <slot></slot>
   </div> -->
   <div
-    class="w-full flex justify-center items-center gap-2 text-2xl sm:text-3xl md:text-4xl md:gap-4 md:justify-start"
+    class="border-t border-zinc-800 pt-8 w-full flex justify-center items-center gap-4 text-2xl sm:text-3xl md:text-4xl md:gap-8 md:justify-start"
   >
     <div
-      class="text-red-500 font-bold text-3xl sm:text-4xl md:text-5xl"
-    >{{ index }}
-    </div>
+      class="text-red-500 font-bold text-5xl md:text-8xl"
+    >{{ props?.index }}</div>
     <slot></slot>
   </div>
 </template>

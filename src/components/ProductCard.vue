@@ -104,7 +104,7 @@ function addSizeToCart() {
     <div
       class="absolute top-0 left-0 right-0 w-full flex justify-between items-center px-4 py-4"
       :class="{
-        'custom-global-px md:!bg-none lg:px-6 lg:pt-4': cardTypeProduct,
+        'custom-global-px md:!bg-none lg:px-6 lg:pt-6': cardTypeProduct,
         'sm:rounded-t-xl sm:bg-none sm:px-6': cardTypeCart,
       }"
     >

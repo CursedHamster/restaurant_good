@@ -14,18 +14,18 @@ const typeElements = ref([]);
 
 function addFixed() {
   const element = document.querySelector("#menu_nav");
-  const sectionsState = Flip.getState("#menu_sections", { simple: true });
-  if (!element.classList.contains("fixed")) {
-    element.classList.add("fixed");
+  const sectionsState = Flip?.getState("#menu_sections", { simple: true });
+  if (!element?.classList?.contains("fixed")) {
+    element?.classList?.add("fixed");
   }
   Flip.from(sectionsState, { duration: 0.5 });
 }
 
 function removeFixed() {
   const element = document.querySelector("#menu_nav");
-  const sectionsState = Flip.getState("#menu_sections", { simple: true });
-  if (element.classList.contains("fixed")) {
-    element.classList.remove("fixed");
+  const sectionsState = Flip?.getState("#menu_sections", { simple: true });
+  if (element?.classList?.contains("fixed")) {
+    element?.classList?.remove("fixed");
   }
   Flip.from(sectionsState, { duration: 0.5 });
 }

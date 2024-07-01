@@ -6,9 +6,10 @@ function scrollToTop() {
 </script>
 <template>
   <footer class="custom-global-px py-10 bg-zinc-900">
-    <div class="flex flex-col justify-between items-center gap-8 md:flex-row">
-      <a href="/" class="md:basis-1/3">
-        <img :src="GoodLogo" alt="GOOD Restaurant Logo" class="w-8 h-8" />
+    <div class="flex flex-col justify-between items-center gap-12 md:flex-row">
+      <a href="/" class="flex flex-col items-center gap-4 md:basis-1/3 md:items-start">
+        <img :src="GoodLogo" alt="GOOD Restaurant Logo" class="w-16 md:w-10" />
+        <p class="text-2xl md:hidden">Піцерія «ГУД»</p>
         <!-- <svg
           class="w-8 h-8 fill-red-500"
           viewBox="0 0 500 500"
@@ -70,7 +71,7 @@ function scrollToTop() {
         </svg> -->
       </a>
       <div
-        class="text-lg 2xl:text-xl flex justify-center gap-4 md:basis-1/3 2xl:gap-6"
+        class="text-lg 2xl:text-xl flex justify-center gap-6 md:basis-1/3 2xl:gap-6"
       >
         <RouterLink class="custom-nav-general-link" to="/">Головна</RouterLink>
         <RouterLink class="custom-nav-general-link" to="/menu">Меню</RouterLink>
@@ -79,7 +80,7 @@ function scrollToTop() {
         >
       </div>
       <div
-        class="text-4xl flex gap-8 justify-center items-center md:basis-1/3 md:justify-end"
+        class="custom-global-text-light text-4xl flex gap-8 justify-center items-center md:basis-1/3 md:justify-end"
       >
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -91,9 +92,7 @@ function scrollToTop() {
         </button>
       </div>
     </div>
-    <p class="text-center text-sm text-zinc-400 mt-4">
-      2023 © Всі права захищені
-    </p>
+    <p class="text-center text-sm text-zinc-400 mt-10 md:w-full">2023 © Всі права захищені</p>
   </footer>
 </template>
 <style scoped></style>
