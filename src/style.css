@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,700&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +7,8 @@
 
 @layer base {
   html {
-    font-family: "Nunito Sans", sans-serif;
+    /* font-family: "Nunito Sans", sans-serif; */
+    font-family: "Ubuntu", sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
@@ -55,11 +57,19 @@ select {
 }
 
 .custom-global-py {
-  @apply py-20;
+  @apply py-20 md:py-28;
+}
+
+.custom-global-title {
+  @apply text-4xl text-center font-bold mb-10 md:mb-16 md:text-5xl 2xl:text-6xl;
+}
+
+.custom-global-title-w-m {
+  @apply text-4xl text-center font-bold md:text-5xl 2xl:text-6xl;
 }
 
 .custom-global-text-light {
-  @apply text-zinc-300 text-opacity-90;
+  @apply text-zinc-400;
 }
 
 .custom-global-gradient-translucent {
@@ -68,6 +78,18 @@ select {
 
 .custom-global-gradient-translucent-md {
   @apply md:bg-gradient-to-br md:from-zinc-900 md:via-transparent md:to-stone-900 md:shadow-sm md:shadow-zinc-900;
+}
+
+.custom-global-background-image {
+  @apply bg-[url("/black-felt.png")] bg-repeat shadow-inner shadow-[#fafafa0d];
+}
+
+.custom-global-background-image-md {
+  @apply md:bg-[url("/black-felt.png")] md:bg-repeat md:shadow-inner md:shadow-[#fafafa0d];
+}
+
+.custom-global-swiper.swiper {
+  @apply pb-6 overflow-y-visible;
 }
 
 .custom-global-swiper .swiper-slide {
@@ -82,7 +104,7 @@ select {
 .custom-global-swiper .swiper-button-next::after,
 .custom-global-swiper .swiper-button-prev::after {
   font-family: FontAwesome;
-  @apply text-red-800 transition-all duration-300 ease-in-out;
+  @apply text-red-500 transition-all duration-300 ease-in-out;
 }
 
 .custom-global-swiper .swiper-button-prev::after {

@@ -8,7 +8,7 @@ const props = defineProps({
 <template>
   <div class="relative w-full h-fit flex justify-center items-center">
     <slot
-      class="peer w-full py-3 px-6 rounded-full bg-zinc-950 border-2 border-zinc-700 focus:outline-none focus:border-red-500 autofill:bg-red-400 autofill:bg-opacity-0"
+      class="peer w-full py-3 px-6 rounded-full bg-zinc-950 border-2 border-zinc-900 focus:outline-none focus:border-red-500 autofill:bg-red-400 autofill:bg-opacity-0"
     ></slot>
     <label
       :for="name"

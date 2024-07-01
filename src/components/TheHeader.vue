@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useOverPagesStore } from "./stores/useOverPagesStore";
+import GoodLogo from "../assets/logo.svg?url";
 const openNav = ref(null);
 const overPagesStore = useOverPagesStore();
 function handleClick(e) {
@@ -19,7 +20,7 @@ onMounted(() => {
 <template>
   <header id="header" class="fixed w-full z-[1000]" role="banner">
     <nav
-      class="custom-global-px flex max-md:justify-between py-5 md:py-2 relative items-center bg-gradient-to-b from-zinc-900 via-[#18181bc2] to-transparent to-100% text-lg 2xl:text-xl"
+      class="custom-global-px flex max-md:justify-between py-5 md:py-2 relative items-center bg-gradient-to-b from-zinc-950 to-transparent to-100% text-lg 2xl:text-xl"
       role="navigation"
     >
       <RouterLink
@@ -27,7 +28,12 @@ onMounted(() => {
         class="md:hidden flex gap-2 text-xl font-bold"
         @click="handleClick"
       >
-        <svg
+        <img
+          :src="GoodLogo"
+          alt="GOOD Restaurant Logo"
+          class="w-7 max-h-10"
+        />
+        <!-- <svg
           class="w-7 max-h-10 fill-red-500"
           viewBox="0 0 500 500"
           xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +91,7 @@ onMounted(() => {
               transform="matrix(-0.7661, -0.642721, 0.647573, -0.76203, -17.831379, -32.534766)"
             />
           </g>
-        </svg>
+        </svg> -->
         ГУД
       </RouterLink>
 
@@ -124,7 +130,12 @@ onMounted(() => {
           class="max-md:hidden md:basis-2/12 flex justify-center"
           @click="handleClick"
         >
-          <svg
+        <img
+          :src="GoodLogo"
+          alt="GOOD Restaurant Logo"
+          class="max-w-10 max-h-10"
+        />
+          <!-- <svg
             class="max-w-10 max-h-10 fill-red-500"
             viewBox="0 0 500 500"
             xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +199,7 @@ onMounted(() => {
                 transform="matrix(-0.7661, -0.642721, 0.647573, -0.76203, -17.831379, -32.534766)"
               />
             </g>
-          </svg>
+          </svg> -->
         </RouterLink>
         <div
           class="md:basis-5/12 flex md:justify-end items-center gap-4 max-md:flex-col py-5"
@@ -265,7 +276,7 @@ onMounted(() => {
 </template>
 <style scoped>
 .custom-nav-general-link {
-  @apply md:relative  md:after:h-1  md:after:w-0  md:after:bg-red-800  md:after:absolute  md:after:-bottom-2  md:after:left-0  md:after:rounded-full  md:after:transition-all  md:after:duration-300  md:after:ease-in-out  md:hover:after:w-1/3 md:active:after:w-full;
+  @apply md:relative  md:after:h-1  md:after:w-0  md:after:bg-red-500  md:after:absolute  md:after:-bottom-2  md:after:left-0  md:after:rounded-full  md:after:transition-all  md:after:duration-300  md:after:ease-in-out  md:hover:after:w-1/3 md:active:after:w-full;
 }
 .custom-nav-icon-link {
   @apply flex gap-2 items-center max-md:justify-end;

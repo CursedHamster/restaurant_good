@@ -22,7 +22,7 @@ const value = computed({
       id="comment"
       name="comment"
       v-model="value"
-      class="resize-none peer w-full py-3 px-6 rounded-3xl bg-transparent border-2 border-zinc-700 focus:outline-none focus:border-red-500 autofill:bg-red-400 autofill:bg-opacity-0"
+      class="resize-none peer w-full py-3 px-6 rounded-3xl bg-transparent border-2 border-zinc-900 focus:outline-none focus:border-red-500 autofill:bg-red-400 autofill:bg-opacity-0"
     ></textarea>
     <label
       :for="name"

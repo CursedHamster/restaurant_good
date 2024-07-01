@@ -4,8 +4,11 @@ const props = defineProps({ title: String, iconClass: String });
 const emit = defineEmits(["buttonAction"]);
 </script>
 <template>
-  <div
+  <!-- <div
     class="w-full max-w-2xl px-4 py-12 rounded-xl bg-zinc-900 flex flex-col items-center gap-8 text-center"
+  > -->
+  <div
+    class="custom-global-background-image w-full max-w-2xl px-10 py-16 rounded-xl flex flex-col items-center gap-8 text-center"
   >
     <i class="text-zinc-700 text-8xl" :class="iconClass"></i>
     <h1 class="mb-8 text-3xl 2xl:text-5xl">{{ title }}</h1>

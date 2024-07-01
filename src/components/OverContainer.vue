@@ -11,7 +11,7 @@ const emit = defineEmits(["closeContainer"]);
         class="fixed top-0 left-0 right-0 w-full h-full pb-6 z-[2000] bg-zinc-950 overflow-y-auto"
       >
         <div class="custom-global-px w-full flex flex-col-reverse gap-8 py-8 justify-between items-center sm:flex-row 2xl:py-20">
-          <h1 class="text-4xl text-center 2xl:text-6xl">
+          <h1 class="custom-global-title-w-m">
           {{ title }}
         </h1>
           <GeneralButton close @click="$emit('closeContainer')">

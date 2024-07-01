@@ -1,4 +1,5 @@
 <script setup>
+import GoodLogo from "../assets/logo.svg?url";
 function scrollToTop() {
   window.scrollTo(0, 0);
 }
@@ -7,7 +8,8 @@ function scrollToTop() {
   <footer class="custom-global-px py-10 bg-zinc-900">
     <div class="flex flex-col justify-between items-center gap-8 md:flex-row">
       <a href="/" class="md:basis-1/3">
-        <svg
+        <img :src="GoodLogo" alt="GOOD Restaurant Logo" class="w-8 h-8" />
+        <!-- <svg
           class="w-8 h-8 fill-red-500"
           viewBox="0 0 500 500"
           xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +67,7 @@ function scrollToTop() {
               transform="matrix(-0.7661, -0.642721, 0.647573, -0.76203, -17.831379, -32.534766)"
             />
           </g>
-        </svg>
+        </svg> -->
       </a>
       <div
         class="text-lg 2xl:text-xl flex justify-center gap-4 md:basis-1/3 2xl:gap-6"

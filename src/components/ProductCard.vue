@@ -95,21 +95,21 @@ function addSizeToCart() {
     v-if="product"
     class="w-full relative bg-zinc-900 rounded-xl shadow-sm shadow-zinc-800 sm:w-80 2xl:w-[22rem]"
     :class="{
-      '!bg-transparent !shadow-none flex flex-col sm:w-full md:items-center md:flex-row md:bg-gradient-to-bl md:from-zinc-900 md:via-transparent md:to-zinc-800 2xl:w-full':
+      'custom-global-background-image-md !bg-transparent shadow-none flex flex-col sm:w-full md:items-center md:flex-row 2xl:w-full':
         cardTypeProduct,
       'sm:w-full sm:flex sm:flex-row sm:justify-center 2xl:w-full':
         cardTypeCart,
     }"
   >
     <div
-      class="absolute top-0 left-0 right-0 w-full flex justify-between items-center bg-gradient-to-b from-zinc-950 to-transparent px-4 py-4"
+      class="absolute top-0 left-0 right-0 w-full flex justify-between items-center px-4 py-4"
       :class="{
-        'custom-global-px md:!bg-none': cardTypeProduct,
+        'custom-global-px md:!bg-none lg:px-6 lg:pt-4': cardTypeProduct,
         'sm:rounded-t-xl sm:bg-none sm:px-6': cardTypeCart,
       }"
     >
       <p
-        class="px-4 py-1 rounded-md shadow-sm h-fit uppercase font-bold"
+        class="px-4 py-1 rounded-md h-fit uppercase font-bold"
         :class="{
           'bg-amber-600': product?.extraId === 1,
           'bg-red-700': product?.extraId === 2,
@@ -180,7 +180,7 @@ function addSizeToCart() {
           {{ product?.name }}
         </h3>
         <p
-          class="custom-global-text-light mt-1"
+          class="custom-global-text-light mt-1 text-lg"
           :class="{
             'line-clamp-3': !cardTypeProduct,
             'md:mt-4': cardTypeProduct,
@@ -193,16 +193,35 @@ function addSizeToCart() {
         </p>
       </div>
       <div
-        class="flex flex-col gap-4 md:flex-row-reverse md:justify-between md:items-end"
+        class="flex flex-col md:justify-between"
         :class="{
-          'h-full gap-4 sm:basis-1/2': cardTypeProduct,
+          'h-full gap-12 sm:basis-1/2': cardTypeProduct,
+          'gap-4 md:flex-row-reverse md:items-end': !cardTypeProduct,
         }"
       >
         <div
           v-if="!cardTypeCart"
-          class="flex justify-between items-center md:flex-col md:items-end"
+          class="flex justify-between items-center"
+          :class="{
+            'w-fit flex-row-reverse gap-2': cardTypeProduct,
+            'md:flex-col md:items-end': !cardTypeProduct,
+          }"
         >
-          <p class="text-red-300">{{ productSize }}</p>
+          <p
+            class="text-red-300 text-lg"
+            :class="{
+              'md:text-xl': cardTypeProduct,
+            }"
+          >
+            {{ productSize }}
+          </p>
+          <p
+            :class="{
+              hidden: !cardTypeProduct,
+            }"
+          >
+            /
+          </p>
           <h3 class="font-bold text-lg sm:text-xl">{{ productPrice }}</h3>
         </div>
         <div v-else class="flex justify-between items-center gap-4 w-full">

@@ -13,17 +13,18 @@ const deliveryInfo = [
 </script>
 <template>
   <main role="main" class="custom-global-px custom-global-py flex-1">
-    <h1 class="text-4xl 2xl:text-6xl mt-8 mb-10 text-center sm:text-start">
+    <h1 class="custom-global-title mt-8 text-center sm:text-start">
       Інформація про доставку
     </h1>
-    <div class="flex flex-col gap-6 text-lg 2xl:text-xl">
+    <div class="flex flex-col gap-8 text-lg md:gap-6 2xl:text-xl">
       <div
-        v-for="info in deliveryInfo"
-        class="relative px-8 py-4 bg-zinc-900 rounded-xl"
+        v-for="(info, i) in deliveryInfo"
+        class="flex items-center gap-4"
       >
-        <i
+        <!-- <i
           class="fa-solid fa-diamond absolute top-0 bottom-0 -left-2 w-fit text-red-500 flex items-center text-2xl"
-        ></i>
+        ></i> -->
+        <p class="text-4xl font-bold text-red-500">{{ i + 1 }}</p>
         <p>{{ info }}</p>
       </div>
     </div>

@@ -49,7 +49,7 @@ function cartButtonAnimation(e) {
     :class="{
       'bg-gradient-to-tr from-red-500 to-red-600 shadow-2xl shadow-red-500 hover:bg-gradient-to-r hover:shadow-xl hover:shadow-red-900':
         filledComputed,
-      'outline outline-2 outline-offset-[-2px] outline-red-500 hover:bg-red-500 hover:bg-opacity-10 hover:backdrop-blur-[1px]':
+      'outline outline-2 outline-offset-[-2px] outline-red-500 hover:bg-red-500 hover:bg-opacity-20 hover:backdrop-blur-[1px]':
         !filledComputed,
       'text-xl px-8 py-4': big,
       'active:translate-y-1': !cart && !close,
