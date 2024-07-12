@@ -194,7 +194,7 @@ onMounted(() => {
       loop
       muted
     /> -->
-    <div class="absolute top-0 left-0 right-0 bottom-0 z-[-1] w-full h-full">
+    <div class="absolute top-0 left-0 right-0 bottom-0 z-[-1] w-full h-full after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b after:from-[#16161cdc] after:to-zinc-950">
       <video
         class="w-full h-full object-cover min-h-full"
         src="/main-video.mp4"
@@ -203,9 +203,6 @@ onMounted(() => {
         muted
       />
     </div>
-    <div
-      class="absolute top-0 left-0 right-0 bottom-0 z-[-1] w-full h-full bg-gradient-to-b from-[#16161cdc] to-zinc-950"
-    ></div>
     <div
       class="custom-global-px my-20 flex flex-col gap-6 max-w-5xl xl:max-w-7xl"
     >
